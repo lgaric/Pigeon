@@ -1,0 +1,23 @@
+﻿<Window x:Class="MQTT_Chat_Application.MainWindow"
+        FocusManager.FocusedElement="{Binding ElementName=broker_ip}"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MQTT_Chat_Application"
+        mc:Ignorable="d"
+        Title="Pigeon" WindowStartupLocation="CenterScreen" HorizontalContentAlignment ="Center" ResizeMode="NoResize" Height="356.783" Width="361.504" >
+
+    <Grid Margin="0,0,3.2,-0.8">
+        <Canvas Margin="0,0,9.8,0">
+            <Image x:Name="image" Height="80" Canvas.Left="12" Width="322" Stretch="None" Source="C:\Users\lukag\Desktop\FOI\MR2\Projekt\MQTT Chat Application\MQTT_LOGO.png"/>
+            <Label Content="Broker address: " Canvas.Left="9" Canvas.Top="79" Height="36" Width="160" Foreground="#FF650063" FontSize="18" FontFamily="Segoe UI Semilight"/>
+            <Label Content="Username: " Canvas.Left="9" Canvas.Top="191" Height="36" Width="160" Foreground="#FF650063" FontSize="18" FontFamily="Segoe UI Semilight"/>
+            <Label Content="Topic:" Canvas.Left="9" Canvas.Top="134" Height="36" Width="160" Foreground="#FF650063" FontSize="18" FontFamily="Segoe UI Semilight"/>
+            <Button Content="Connect" Canvas.Left="120" Canvas.Top="274" Width="113" Height="33" Click="Button_Click" Background="#FF890187" FontSize="22" FontStretch="SemiExpanded" Foreground="White" BorderBrush="Black" FontFamily="Segoe UI Light"/>
+            <TextBox x:Name="broker_ip" GotKeyboardFocus="KeyFocus" HorizontalAlignment="Left" Height="21" TextWrapping="Wrap" VerticalAlignment="Top" Width="331" RenderTransformOrigin="2.041,10.228" HorizontalContentAlignment="Left" BorderBrush="#FF890187" Canvas.Left="9" Canvas.Top="115" Foreground="Black"/>
+            <TextBox x:Name="Topic" GotKeyboardFocus="KeyFocus" HorizontalAlignment="Left" Height="21" TextWrapping="Wrap" VerticalAlignment="Top" Width="331" HorizontalContentAlignment="Left" BorderBrush="#FF890187" Canvas.Left="9" Canvas.Top="170" Foreground="Black"/>
+            <TextBox x:Name="Username" GotKeyboardFocus="KeyFocus" HorizontalAlignment="Left" KeyDown="ButtonPress" Height="21" TextWrapping="Wrap" VerticalAlignment="Top" Width="331" RenderTransformOrigin="2.041,10.228" HorizontalContentAlignment="Left" BorderBrush="#FF890187" Canvas.Left="8" Canvas.Top="227" Foreground="Black"/>
+        </Canvas>
+    </Grid>
+</Window>

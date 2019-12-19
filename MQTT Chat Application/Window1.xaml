@@ -1,0 +1,26 @@
+﻿<Window x:Class="MQTT_Chat_Application.Window1"
+        FocusManager.FocusedElement="{Binding ElementName=Type}"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MQTT_Chat_Application"
+        mc:Ignorable="d"
+        Title="Pigeon - Chat" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Height="468.359" Width="651.816" TextBlock.TextAlignment="Left">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="235*"/>
+            <ColumnDefinition Width="88*"/>
+        </Grid.ColumnDefinitions>
+        <RichTextBox x:Name="Chat" HorizontalAlignment="Left" Height="396" VerticalAlignment="Top" Width="646" RenderTransformOrigin="0.5,0.5" VerticalScrollBarVisibility="Auto" IsReadOnly="True" IsUndoEnabled="False" OverridesDefaultStyle="True" BorderBrush="Black" Grid.ColumnSpan="2" Margin="0,0,-0.4,0" FontFamily="Segoe UI Semilight" FontSize="20" TextChanged="Chat_TextChanged" Foreground="#FF650063">
+            <RichTextBox.Resources>
+                <Style TargetType="{x:Type Paragraph}">
+                    <Setter Property="Margin" Value="0"/>
+                </Style>
+            </RichTextBox.Resources>
+        </RichTextBox>
+        <TextBox x:Name="Type" KeyDown="ButtonPress" TextWrapping="Wrap" Margin="0,396,9.6,0.4" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" BorderBrush="#FF650063" FontFamily="Segoe UI Light" FontSize="22" Foreground="#FF650063"/>
+        <Button Content="Send" Margin="467,398,105,3" Click="Button_Click_1" Background="#FF650063" FontSize="18" BorderBrush="#FF650063" FontFamily="Segoe UI Light" Foreground="White" Grid.ColumnSpan="2"/>
+        <Button Content="Main menu" Margin="77,398,0,3" HorizontalAlignment="Left" Width="93" Click="Button_Click" Background="#FF650063" FontSize="18" BorderBrush="#FF650063" Grid.Column="1" FontFamily="Segoe UI Light" Foreground="White"/>
+    </Grid>
+</Window>
